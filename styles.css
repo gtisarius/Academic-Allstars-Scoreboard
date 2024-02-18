@@ -1,0 +1,49 @@
+.header {
+    text-align:center
+}
+
+.links-background {
+    text-align:center
+}
+
+.links {
+    display: inline-block;
+}
+
+.header-bg {
+    background-color: white;
+}
+
+.main {
+    background-color:burlywood;
+    margin:50px;
+    border:black;
+    border-width: 2px;
+}
+
+.scoreboard {
+    text-align: center;
+    width:100%
+}
+
+.teamScores {
+    font-size: 200px;
+}
+
+.teams {
+    font-size:xx-large
+}
+
+.lScoreBtns {
+    height: 50px;
+    width: 50px;
+    background-color: darkred;
+    color:white
+}
+
+.wScoreBtns {
+    height: 50px;
+    width: 50px;
+    background-color: green;
+    color:white
+}
