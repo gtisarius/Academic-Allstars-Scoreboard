@@ -38,12 +38,14 @@
     height: 50px;
     width: 50px;
     background-color: darkred;
-    color:white
+    color:white;
+    border-color: red;
 }
 
 .wScoreBtns {
     height: 50px;
     width: 50px;
     background-color: green;
-    color:white
+    color:white;
+    border-color:greenyellow
 }
