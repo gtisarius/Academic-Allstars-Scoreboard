@@ -14,16 +14,13 @@ function getAwayName() {
 }
 
 function changeScore(team) {
-    var newScore = prompt("Enter score manually: ")
-    if (Number(newScore) == NaN) {
-        window.alert("Not a number. Try again.")
-        changeScore(team)
-    } else {
-        if (team == "home") {
-            document.getElementById("homeTeamScore") = Number(newScore)
-        } else if (team == "away") {
-            document.getElementById("awayTeamScore") = Number(newScore)
-        }
+    let teamType = team
+    var oldScore = prompt("Enter score manually: ")
+    newScore = Number(oldScore)
+    if (teamType == "home") {
+        document.getElementById("homeTeamScore").innerHTML = newScore
+    } else if (teamType == "away") {
+        document.getElementById("awayTeamScore").innerHTML = newScore
     }
 }
 

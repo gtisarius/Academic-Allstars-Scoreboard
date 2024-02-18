@@ -29,10 +29,6 @@
     /* white-space: nowrap; */
 }
 
-table, th, td {
-    /* border:1px solid black */
-}
-
 .teamScores {
     font-size: 200px;
 }
