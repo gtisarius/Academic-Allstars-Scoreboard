@@ -1,16 +1,20 @@
+/*
 var homeScoreElement = document.getElementById("homeTeamScore")
 var homeScore = Number(homeScoreElement.innerHTML)
 var awayScoreElement = document.getElementById("awayTeamScore")
 var awayScore = Number(awayScoreElement.innerHTML)
+*/
 
 function getHomeName() {
     var homeTeamName = prompt("Enter name of home team: ")
     document.getElementById("homeTeam").innerHTML = homeTeamName
+    localStorage.setItem("homeTeamName", homeTeamName)
 }
 
 function getAwayName() {
     var awayTeamName = prompt("Enter name of away team: ")
     document.getElementById("awayTeam").innerHTML = awayTeamName
+    localStorage.setItem("awayTeamName", awayTeamName)
 }
 
 function changeScore(team) {
@@ -48,6 +52,19 @@ function getAwayScore() {
 
 function testFunc() {
     window.alert("Hello world")
+}
+
+window.onload = function() {
+    console.log("Home team was " + localStorage.getItem("homeTeamName"))
+    if (localStorage.getItem("homeTeamName") !== null) {
+        document.getElementById("homeTeam").innerHTML = localStorage.getItem("homeTeamName")
+    } else {
+        console.log("Last session is null.")
+    }
+    console.log("Away team was " + localStorage.getItem("awayTeamName"))
+    if (localStorage.getItem("awayTeamName") !== null) {
+        document.getElementById("awayTeam").innerHTML = localStorage.getItem("awayTeamName")
+    }
 }
 
 // document.getElementById("homeTeamScore").innerHTML
