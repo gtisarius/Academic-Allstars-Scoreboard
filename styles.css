@@ -19,11 +19,14 @@
     margin:50px;
     border:black;
     border-width: 2px;
+    text-align: center;
 }
 
 .scoreboard {
-    text-align: center;
+    text-align: center; 
     width:100%;
+    table-layout: fixed;
+    /* white-space: nowrap; */
 }
 
 table, th, td {
