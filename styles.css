@@ -23,7 +23,11 @@
 
 .scoreboard {
     text-align: center;
-    width:100%
+    width:100%;
+}
+
+table, th, td {
+    /* border:1px solid black */
 }
 
 .teamScores {
@@ -48,4 +52,8 @@
     background-color: green;
     color:white;
     border-color:greenyellow
+}
+
+.gitlink {
+    text-align: center;
 }
