@@ -23,8 +23,10 @@ function changeScore(team) {
     newScore = Number(oldScore)
     if (teamType == "home") {
         document.getElementById("homeTeamScore").innerHTML = newScore
+        localStorage.setItem("homeScore", newScore)
     } else if (teamType == "away") {
         document.getElementById("awayTeamScore").innerHTML = newScore
+        localStorage.setItem("awayScore", newScore)
     }
 }
 
@@ -34,9 +36,11 @@ function addScore(team, score) {
     if (teamType == "home") {
         currentScore = Number(document.getElementById("homeTeamScore").innerHTML) + score
         document.getElementById("homeTeamScore").innerHTML = currentScore
+        localStorage.setItem("homeScore", currentScore)
     } else if (teamType == "away") {
         currentScore = Number(document.getElementById("awayTeamScore").innerHTML) + score
         document.getElementById("awayTeamScore").innerHTML = currentScore
+        localStorage.setItem("awayScore", currentScore)
     }
 }
 
@@ -61,10 +65,16 @@ window.onload = function() {
     } else {
         console.log("Last session is null.")
     }
+    if (localStorage.getItem("homeScore") !== null) {
+        document.getElementById("homeTeamScore").innerHTML = localStorage.getItem("homeScore")
+    } 
     console.log("Away team was " + localStorage.getItem("awayTeamName"))
     if (localStorage.getItem("awayTeamName") !== null) {
         document.getElementById("awayTeam").innerHTML = localStorage.getItem("awayTeamName")
     }
+    if (localStorage.getItem("awayScore") !== null) {
+        document.getElementById("awayTeamScore").innerHTML = localStorage.getItem("awayScore")
+    } 
 }
 
 // document.getElementById("homeTeamScore").innerHTML
