@@ -1,22 +1,39 @@
+body {
+    background-color: dimgrey;
+}
+
 .header {
-    text-align:center
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
+    color:yellow
 }
 
 .links-background {
-    text-align:center
+    text-align:center;
+    color:yellow
 }
 
 .links {
     display: inline-block;
+    color: yellow;
+    margin: 0px;
+    padding: 0px;
+}
+
+.links, .main {
+    margin-bottom: 0px;
+    padding: 0px
 }
 
 .header-bg {
-    background-color: white;
+    background-color: dimgrey;
 }
 
 .main {
     background-color:burlywood;
-    margin:50px;
+    margin-top:10px;
+    margin-left:50px;
+    margin-right:50px;
     border:black;
     border-width: 2px;
     text-align: center;
@@ -55,4 +72,5 @@
 
 .gitlink {
     text-align: center;
+    color: yellow
 }
