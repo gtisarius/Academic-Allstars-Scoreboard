@@ -5,6 +5,38 @@ var awayScoreElement = document.getElementById("awayTeamScore")
 var awayScore = Number(awayScoreElement.innerHTML)
 */
 
+function openTab(tab) {
+    if (tab == 'scoreboard') {
+        window.location.href = "index.html"
+    } else if (tab == 'about') {
+        window.location.href = "about.html"
+    }
+}
+
+function hoverColor(tab) {
+    if (tab == 'scoreboard') {
+        document.getElementById('scoreTab').style.backgroundColor = 'darkGray'
+    } else if (tab == 'about') {
+        document.getElementById('aboutTab').style.backgroundColor = 'darkGray'
+    }
+}
+
+function hoverOut(tab) {
+    if (tab == 'scoreboard') {
+        if (document.getElementById('scoreTab').classList.contains('highlight') == true) {
+            document.getElementById('scoreTab').style.backgroundColor = 'dimGray'
+        } else {
+            document.getElementById('scoreTab').style.backgroundColor = 'white'
+        }
+    } else if (tab == 'about') {
+        if (document.getElementById('aboutTab').classList.contains('highlight') == true) {
+            document.getElementById('aboutTab').style.backgroundColor = 'dimGray'
+        } else {
+            document.getElementById('aboutTab').style.backgroundColor = 'white'
+        }
+    }
+}
+
 function getHomeName() {
     var homeTeamName = prompt("Enter name of home team: ")
     document.getElementById("homeTeam").innerHTML = homeTeamName
@@ -59,6 +91,7 @@ function testFunc() {
 }
 
 window.onload = function() {
+    console.log("Current page: " + window.location.href)
     console.log("Home team was " + localStorage.getItem("homeTeamName"))
     if (localStorage.getItem("homeTeamName") !== null) {
         document.getElementById("homeTeam").innerHTML = localStorage.getItem("homeTeamName")

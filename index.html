@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
     <head>
@@ -7,63 +8,62 @@
     </head>
 
     <body>
-        <header class="header-bg">
-            <h1 class="header">Academic All-Stars<br>
-                <small class="header">Unofficial Scoreboard</small>
+        <header>
+            <h1 class="header" id="aasTitle">Academic All-Stars<br>
+                <small class="header" id="aasSubText">Unofficial Scoreboard</small>
             </h1>
         </header>
-        <div class="links-background">
-            <a href="index.html" class="links" aria-current="page"><b>SCOREBOARD</b></a>
-            <p class="links">|</p>
-            <a href="about.html" class="links" aria-current="page">ABOUT</a>
-            <div class="main">
-                <div class="scores">
-                    <table class="scoreboard">
-                        <tr>
-                            <th><b id="homeTeam" class="teams">Home Team</b></th>
-                            <th><b id="awayTeam" class="teams">Away Team</b></th>
-                        </tr>
-                        <tr>
-                            <th><button class="teamBtns" onclick="getHomeName()">Change Team Name</button></th>
-                            <th><button class="teamBtns" onclick="getAwayName()">Change Team Name</button></th>
-                        </tr>
-                        <tr>
-                            <td id="homeTeamScore" class="teamScores">0</td>
-                            <td id="awayTeamScore" class="teamScores">0</td>
-                        </tr>
-                        <tr>
-                            <td><button class="manualScoreBtns" onclick="changeScore('home')">Manually Change Score</button></td>
-                            <td><button class="manualScoreBtns" onclick="changeScore('away')">Manually Change Score</button></td>
-                        </tr>
-                        <br>
-                        <br>
-                        <tr>
-                            <th>
-                                <button class="lScoreBtns" onclick="addScore('home', -1)"><b>-1</b></button>
-                                <button class="wScoreBtns" onclick="addScore('home', 1)"><b>+1</b></button>
-                            </th>
-                            <th>
-                                <button class="lScoreBtns" onclick="addScore('away', -1)"><b>-1</b></button>
-                                <button class="wScoreBtns" onclick="addScore('away', 1)"><b>+1</b></button>                            
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <button class="lScoreBtns" onclick="addScore('home', -2)"><b>-2</b></button>
-                                <button class="wScoreBtns" onclick="addScore('home', 2)"><b>+2</b></button>                            
-                            </th>
-                            <th>
-                                <button class="lScoreBtns" onclick="addScore('away', -2)"><b>-2</b></button>
-                                <button class="wScoreBtns" onclick="addScore('away', 2)"><b>+2</b></button>
-                            </th>
-                        </tr>
-                    </table>
+        <div class="tabs" onload="tabCheck()">
+            <div class="tab highlight" id="scoreTab" onclick="openTab('scoreboard')" onmouseover="hoverColor('scoreboard')" onmouseout="hoverOut('scoreboard')">Scoreboard</div>
+            <div class="tab" id="aboutTab" onclick="openTab('about')" onmouseover="hoverColor('about')" onmouseout="hoverOut('about')">About</div>
+        </div>
+        <div class="main">
+            <div class="scores">
+                <table class="scoreboard">
+                    <tr>
+                        <td><b id="homeTeam" class="teams">Home Team</b></td>
+                        <td><b id="awayTeam" class="teams">Away Team</b></td>
+                    </tr>
+                    <tr>
+                        <th><button class="teamBtns" onclick="getHomeName()">Change Team Name</button></th>
+                        <th><button class="teamBtns" onclick="getAwayName()">Change Team Name</button></th>
+                    </tr>
+                    <tr>
+                        <td id="homeTeamScore" class="teamScores">0</td>
+                        <td id="awayTeamScore" class="teamScores">0</td>
+                    </tr>
+                    <tr>
+                        <td><button class="manualScoreBtns" onclick="changeScore('home')">Manually Change Score</button></td>
+                        <td><button class="manualScoreBtns" onclick="changeScore('away')">Manually Change Score</button></td>
+                    </tr>
                     <br>
                     <br>
-                </div>
+                    <tr>
+                        <th>
+                            <button class="lScoreBtns" onclick="addScore('home', -1)"><b>-1</b></button>
+                            <button class="wScoreBtns" onclick="addScore('home', 1)"><b>+1</b></button>
+                        </th>
+                        <th>
+                            <button class="lScoreBtns" onclick="addScore('away', -1)"><b>-1</b></button>
+                            <button class="wScoreBtns" onclick="addScore('away', 1)"><b>+1</b></button>                            
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <button class="lScoreBtns" onclick="addScore('home', -2)"><b>-2</b></button>
+                            <button class="wScoreBtns" onclick="addScore('home', 2)"><b>+2</b></button>                            
+                        </th>
+                        <th>
+                            <button class="lScoreBtns" onclick="addScore('away', -2)"><b>-2</b></button>
+                            <button class="wScoreBtns" onclick="addScore('away', 2)"><b>+2</b></button>
+                        </th>
+                    </tr>
+                </table>
+                <br>
+                <br>
             </div>
         </div>
-        <p class="gitlink"><b>Notice a bug? Contact me on <a href="https://github.com/gtisarius/Academic-Allstars-Scoreboard" target="_blank">GitHub!</a></b></p>
+        <p class="gitlink"><b>Notice a bug? Contact me on <a id="gitlink" href="https://github.com/gtisarius/Academic-Allstars-Scoreboard" target="_blank">GitHub!</a></b></p>
     </body>
     
 </html>

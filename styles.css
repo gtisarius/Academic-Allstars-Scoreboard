@@ -1,41 +1,58 @@
 body {
-    background-color: dimgrey;
+    background-color: green;
 }
 
 .header {
     text-align:center;
     font-family: Arial, Helvetica, sans-serif;
-    color:yellow
+    color:white
 }
 
-.links-background {
+#aasTitle {
+    margin-bottom: 3px
+}
+
+.tabs {
+    display: flex;
     text-align:center;
-    color:yellow
+    table-layout: fixed;
 }
 
-.links {
-    display: inline-block;
-    color: yellow;
-    margin: 0px;
-    padding: 0px;
+.tab {
+    text-align: center;
+    width:100%;
+    padding: 10px;
+    /*margin-left:50px;*/
+    background-color:white;
+    border: 2px solid black;
+    border-bottom: 0px;
+    font-size:25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style:italic
 }
 
-.links, .main {
-    margin-bottom: 0px;
-    padding: 0px
+.highlight {
+    background-color:dimgray;
+    color:white
 }
 
-.header-bg {
-    background-color: dimgrey;
+#scoreTab {
+    margin-left: 60px;
+    margin-right: -1px;
+}
+
+#aboutTab {
+    margin-right: 60px;
+    margin-left: -1px;
 }
 
 .main {
     background-color:burlywood;
-    margin-top:10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top:0px;
     margin-left:50px;
     margin-right:50px;
-    border:black;
-    border-width: 2px;
+    border:2px solid black;
     text-align: center;
 }
 
@@ -47,10 +64,12 @@ body {
 }
 
 .teamScores {
+    font-family:Arial, Helvetica, sans-serif;
     font-size: 200px;
 }
 
 .teams {
+    font-family:Arial, Helvetica, sans-serif;
     font-size:50px
 }
 
@@ -72,5 +91,10 @@ body {
 
 .gitlink {
     text-align: center;
-    color: yellow
+    font-family: Arial, Helvetica, sans-serif;
+    color: white
+}
+
+#gitlink {
+    color: white
 }
