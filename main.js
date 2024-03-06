@@ -1,9 +1,4 @@
-/*
-var homeScoreElement = document.getElementById("homeTeamScore")
-var homeScore = Number(homeScoreElement.innerHTML)
-var awayScoreElement = document.getElementById("awayTeamScore")
-var awayScore = Number(awayScoreElement.innerHTML)
-*/
+const version = 'v1.1'
 
 function openTab(tab) {
     if (tab == 'scoreboard') {
@@ -91,6 +86,7 @@ function testFunc() {
 }
 
 window.onload = function() {
+    document.getElementById('versionNumber').innerHTML = version
     console.log("Current page: " + window.location.href)
     console.log("Home team was " + localStorage.getItem("homeTeamName"))
     if (localStorage.getItem("homeTeamName") !== null) {

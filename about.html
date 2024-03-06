@@ -11,6 +11,28 @@
             <h1 class="bgText" id="aasTitle">Academic All-Stars<br>
                 <small class="bgText" id="aasSubText">Unofficial Scoreboard</small>
             </h1>
+            <div class="colorPickerGroup">
+                <button class="showButton" onclick="showOrHide()">Show Color Options</button>
+                <div class="pickColors" id="pickColors">
+                    <p class="bgText"><b>Background colors:</b><br></p>
+                    <label for="bgColorPicker" class="bgText">Color: </label>
+                    <input type="color" id="bgColorPicker"><br>
+                    <label for="bgTextPicker" class="bgText">Text: </label>
+                    <select name="bgTextColors" id="bgTextColors" class="bgTextColors">
+                        <option value="white">White</option>
+                        <option value="black">Black</option>
+                    </select>
+                    
+                    <p class="bgText"><b>Scoreboard colors:</b><br></p> 
+                    <label for="sbColorPicker" class="bgText">Color: </label>
+                    <input type="color" id="sbColorPicker"><br>
+                    <label for="sbTextPicker" class="bgText">Text: </label>
+                    <select name="sbTextColors" id="sbTextColors" class="sbTextColors">
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                    </select><br><br>
+                    <!--<button id="saveColors" onclick="saveColors()">Save!</button>-->
+                </div><br><br>
         </header>
         <div class="tabs">
             <div class="tab" id="scoreTab" onclick="openTab('scoreboard')" onmouseover="hoverColor('scoreboard')" onmouseout="hoverOut('scoreboard')">Scoreboard</div>
@@ -40,6 +62,7 @@
             <br>
         </div>
         <p class="bgText"><b>Notice a bug? Contact me on <a id="gitlink" href="https://github.com/gtisarius/Academic-Allstars-Scoreboard" target="_blank">GitHub!</a></b></p>
+        <p class="bgText" id="versionNumber"></p>
     </body>
     
 </html>
